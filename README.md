@@ -52,3 +52,7 @@ TRACK_DATA es la información que recibes sobre cada track en un álbum.
 
 Ejemplo:
 `curl 'https://react-api-lab.herokuapp.com/playlists/@sparragus' -X POST -H 'Content-Type: application/json' -d '{"track":{"trackNumber":3,"name":"Wish You Were Here","durationInSeconds":325,"album":{"id":"a2f73eb8-eee6-3588-8909-9046058a468e","name":"Wish You Were Here"},"artist":{"id":"83d91898-7763-47d7-b03b-b92132375c47","name":"Pink Floyd"}}}'`
+
+### Tips
+
+- Puedes usar de referencia los ejercicios que hicimos en la clase 8: https://codesandbox.io/s/52zz3lv47x
