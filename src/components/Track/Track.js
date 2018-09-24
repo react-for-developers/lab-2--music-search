@@ -6,8 +6,8 @@ export default class Track extends Component {
   }
 
   saveTrackHandler() {
-    console.log(this.track);
-    fetch("https://react-api-lab.herokuapp.com/playlists/@sparragus", {
+    console.log(this.props.track);
+    fetch("https://react-api-lab.herokuapp.com/playlists/@pablo", {
       method: "POST",
       body: JSON.stringify({ track: this.props.track }),
       headers: {

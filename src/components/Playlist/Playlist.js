@@ -3,6 +3,7 @@ import React, { Component } from "react";
 export default class Playlist extends Component {
   constructor() {
     super();
+    this.userName = "@pablo";
     this.getList();
     this.state = {
       playList: null
@@ -10,7 +11,10 @@ export default class Playlist extends Component {
   }
 
   getList() {
-    fetch("https://react-api-lab.herokuapp.com/playlists/@sparragus")
+    const url = `https://react-api-lab.herokuapp.com/playlists/${
+      this.userName
+    }`;
+    fetch(url)
       .then(r => r.json())
       .then(r => {
         const playlist = r.data;
@@ -18,6 +22,7 @@ export default class Playlist extends Component {
       })
       .catch(e => console.log(e));
   }
+
   render() {
     const { playlist } = this.state;
     console.log(playlist);
@@ -26,7 +31,15 @@ export default class Playlist extends Component {
       <div className="row">
         <div className="col-12">
           <div>
-            <h1>My Playlist</h1>
+            <h1>
+              {this.userName && (
+                <span>
+                  {this.userName}
+                  's
+                </span>
+              )}{" "}
+              Playlist
+            </h1>
             <ul>
               {playlist &&
                 playlist.map(e => {
