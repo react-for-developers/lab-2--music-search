@@ -1,0 +1,17 @@
+.SearchBar__input {
+  height: 50px;
+  width: 500px;
+  font-size: 20px;
+}
+
+.SearchBar__submit-button {
+  height: 50px;
+  width: 100px;
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+.SeachBar__container {
+  display: flex;
+  justify-content: center;
+}
